@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <Windows.H>
+
+using namespace std;
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	string input;
+	string toReplace = "№";
+	string replaceWith = "номер по порядку";
+
+
+	getline(cin, input);
+
+	cout << "Входная строка - " << input << endl;
+	input.replace(input.find(toReplace), toReplace.length(), replaceWith);
+	cout << "После замены - " << input << endl << endl;
+
+	
+}
